@@ -1,4 +1,5 @@
 //https://www.acmicpc.net/problem/5430
+//발표
 
 #include <iostream>
 #include <string>
@@ -44,7 +45,7 @@ int main() {
 			if (str[i] == 'R') {
 				reverse = !reverse;
 			}
-			else {
+			else if(str[i] == 'D') {
 				if (reverse) { // 거꾸로 뒤집힘
 					tail--;
 				}

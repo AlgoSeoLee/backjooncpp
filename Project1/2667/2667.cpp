@@ -33,8 +33,7 @@ void dfs(int x, int y) {
     }
 }
 
-
-int main(int argc, const char* argv[]) {
+int main() {
     string line;
     cin >> N;
 
@@ -57,8 +56,8 @@ int main(int argc, const char* argv[]) {
 
     sort(cnt_vec.begin(), cnt_vec.end());
     cout << cnt_vec.size() << '\n';
-    for (int i = 0; i < cnt_vec.size(); i++)
+    for (int i = 0; i < cnt_vec.size(); i++) {
         cout << cnt_vec[i] << '\n';
-
+    }
     return 0;
 }

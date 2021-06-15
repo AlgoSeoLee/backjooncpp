@@ -1,5 +1,5 @@
 //https://www.acmicpc.net/problem/16953
-//백준
+//발표
 
 #include<iostream>
 #include<algorithm>
