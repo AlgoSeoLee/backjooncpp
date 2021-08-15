@@ -1,0 +1,4 @@
+﻿  2644.cpp
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\2644\2644.cpp(15,9): error C2562: 'dfs': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\2644\2644.cpp(10): message : 'dfs' 선언을 참조하십시오.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\2644\2644.cpp(18,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
