@@ -1,0 +1,12 @@
+﻿  1644.cpp
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(8,1): error C2144: 구문 오류: int'은(는) ';' 다음에 와야 합니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(8,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(12,1): error C2144: 구문 오류: int'은(는) ';' 다음에 와야 합니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(12,5): error C4430: 형식 지정자가 없습니다. int로 가정합니다. 참고: C++에서는 기본 int를 지원하지 않습니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(11,1): error C2086: 'int ​': 재정의
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(7): message : '​' 선언을 참조하십시오.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(29,9): error C2143: 구문 오류: ';'이(가) 'for' 앞에 없습니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(38,9): error C2144: 구문 오류: int'은(는) ';' 다음에 와야 합니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(50,13): error C2143: 구문 오류: ';'이(가) 'if' 앞에 없습니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(53,9): error C2146: 구문 오류: ';'이(가) 'cout' 식별자 앞에 없습니다.
+C:\Users\Hwang_chang_hoon\Desktop\백준\Project1\1644\1644.cpp(55,9): error C2143: 구문 오류: ';'이(가) 'return' 앞에 없습니다.
