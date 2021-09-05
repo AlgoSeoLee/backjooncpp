@@ -32,7 +32,8 @@ void Union(int x, int y, int Cost)
     if (x == y) { 
         return; 
     }
-    Parent[y] = x;
+    else
+        Parent[y] = x;
     N--;
 }
 
@@ -42,7 +43,7 @@ bool Same_Parent(int x, int y)
     y = Find_Parent(y);
 
     if (x == y) return true;
-    return false;
+    else return false;
 }
 
 int main(void)
@@ -60,7 +61,9 @@ int main(void)
     }
 
     sort(Edge.begin(), Edge.end());
-    for (int i = 1; i <= N; i++) Parent[i] = i;
+    for (int i = 1; i <= N; i++) {
+        Parent[i] = i;
+    }
 
     for (int i = 0; i < Edge.size(); i++)
     {

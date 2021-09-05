@@ -1,4 +1,5 @@
 //https://www.acmicpc.net/problem/1922
+//¹ßÇ¥
 
 #include <iostream>
 #include <vector>

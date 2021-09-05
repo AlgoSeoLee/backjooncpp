@@ -1,4 +1,5 @@
 //https://www.acmicpc.net/problem/9663
+//¹ßÇ¥
 
 #include <iostream>
 #define MAX 15

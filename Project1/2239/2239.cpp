@@ -60,13 +60,11 @@ int main(void)
     cin.tie(NULL);
     cout.tie(NULL);
 
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < MAX; i++)
     {
-        string Inp;
-        cin >> Inp;
-        for (int j = 0; j < Inp.length(); j++)
+        for (int j = 0; j < MAX; j++)
         {
-            MAP[i][j] = Inp[j] - '0';
+            cin >> MAP[i][j];
             if (MAP[i][j] != 0)
             {
                 Row[i][MAP[i][j]] = true;

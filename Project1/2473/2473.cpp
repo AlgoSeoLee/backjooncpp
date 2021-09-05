@@ -1,5 +1,5 @@
 //https://www.acmicpc.net/problem/2473
-//발표
+//발표.
 
 #include <iostream>
 #include <algorithm>

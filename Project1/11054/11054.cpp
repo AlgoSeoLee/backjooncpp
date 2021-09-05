@@ -1,4 +1,5 @@
 //https://www.acmicpc.net/problem/11054
+//¹ßÇ¥
 
 #include<iostream>
 #define MAX 1001

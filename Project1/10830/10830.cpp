@@ -44,8 +44,7 @@ int main()
 
 	while (B > 0)
 	{
-		if (B % 2 == 1)
-		{
+		if (B % 2 == 1){
 			Matrix_multi(ans, A); // 정답행렬에 A행렬 곱하기
 		}
 		Matrix_multi(A, A);

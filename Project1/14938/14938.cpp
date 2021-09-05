@@ -45,9 +45,11 @@ void dijkstra(int start)
 		}
 	}
 
-	for (int i = 1; i <= n; i++)
-		if (d[i] <= m) cnt += local[i];
-
+	for (int i = 1; i <= n; i++) {
+		if (d[i] <= m) {
+			cnt += local[i];
+		}
+	}
 	ans = max(ans, cnt);
 }
 

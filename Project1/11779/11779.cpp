@@ -1,61 +1,80 @@
 //https://www.acmicpc.net/problem/11779
-//백준
+//발표
 
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <functional>
+#include <algorithm>
 
 using namespace std;
 
+const int MAX = 1000 + 1;
+const int INF = 987654321;
 int N, M;
-int start, target, res = 987654321;
-vector<pair<int, int>> v[1001]; //v[i] = {j,k} : i에서 j까지 거리 k
-int dist[1001]; // dist[i] = start에서 i까지 최소 거리
-int route[1001]; // route[i] = 경로에서 i 노드로 가기 바로 직전 노드
+int trace[MAX]; //경로 파악 위해
+vector<pair<int, int>> graph[MAX];
 
-void dijkstra() {
-	priority_queue<pair<int, int>> q;
-	dist[start] = 0;
-	q.push({ 0,start });// -거리, 노드
-	while (!q.empty()) {
-		int cur = q.top().second;
-		int curD = -q.top().first;
-		q.pop();
+vector<int> dijkstra(int start, int vertex){
+    vector<int> distance(vertex, INF);
+    distance[start] = 0;
 
-		for (int i = 0; i < v[cur].size(); i++) {
-			int next = v[cur][i].first;
-			int nextD = v[cur][i].second;
-			if (dist[next] > curD + nextD) {
-				dist[next] = curD + nextD;
-				route[next] = cur;
-				q.push({ -dist[next],next });
-			}
-		}
-	}
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+
+    pq.push({ 0, start });
+
+    while (!pq.empty()){
+        int cost = pq.top().first;
+        int cur = pq.top().second;
+        pq.pop();
+
+        if (distance[cur] < cost) {
+            continue;
+        }
+        for (int i = 0; i < graph[cur].size(); i++){
+            int neighbor = graph[cur][i].first;
+            int neighborDistance = cost + graph[cur][i].second;
+
+            //업데이트할 때마다 trace도 업데이트
+            if (distance[neighbor] > neighborDistance){
+                distance[neighbor] = neighborDistance;
+                trace[neighbor] = cur;
+                pq.push({ neighborDistance, neighbor });
+            }
+        }
+    }
+    return distance;
 }
 
-int main()
-{
-	cin >> N >> M;
-	for (int here, there, distance, i = 1; i <= M; i++) {
-		cin >> here >> there >> distance;
-		v[here].push_back({ there,distance });
-	}
-	cin >> start >> target;
+int main(void){
 
-	for (int i = 1; i <= N; i++) dist[i] = 987654321;
-	dijkstra();
-	cout << dist[target] << "\n";
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
 
-	vector<int> ans;
-	int idx = target;
-	while (idx) {
-		ans.push_back(idx);
-		idx = route[idx];
-	}
+    cin >> N >> M;
+    N++;
 
-	cout << ans.size() << "\n";
-	for (int i = ans.size() - 1; i >= 0; i--) {
-		cout << ans[i] << " ";
-	}
+    for (int i = 0; i < M; i++){
+        int u, v, w;
+        cin >> u >> v >> w;
+        graph[u].push_back({ v, w });
+    }
+
+    int start, finish;
+    cin >> start >> finish;
+    vector<int> result = dijkstra(start, N);
+    cout << result[finish] << "\n";
+    vector<int> route;
+    int node = finish;
+    while (node){
+        route.push_back(node);
+        node = trace[node];
+    }
+    cout << route.size() << "\n";
+    //역순으로 저장되므로
+    for (int i = route.size() - 1; i >= 0; i--) {
+        cout << route[i] << " ";
+    }
+    cout << "\n";
+    return 0;
 }
